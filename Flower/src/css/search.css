@@ -1,0 +1,228 @@
+@import url('base.css');
+.beijing{
+    width: 100%;
+    height: 1.08rem;
+    background: #009B38;
+}
+.sousuo{
+    width: 100%;
+    height: 1.08rem;
+    padding: 0.18rem 0.3rem;
+}
+.qx{
+    display: block;
+    color: #fff;
+    font-size: 0.32rem;
+    float: left;
+    line-height: 0.65rem;
+}
+#input{
+    width: 86%;
+    height: 0.64rem;
+    background: #fff;
+    line-height: 0.64rem;
+    display: block;
+    float: right;
+    border-radius: 0.25rem;
+    position: relative;
+}
+#input1{
+    width: 86%;
+    height: 0.64rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    outline: none;
+}
+.s1,.s2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: left;
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    left: 0.1rem;
+}
+.s1{
+    background: #00A13A;
+}
+.s2{
+    background: #FFA300;
+    left: 0.25rem;
+}
+.icon-huatong{
+    position: absolute;
+    right: 0.1rem;
+    color: #666;
+}
+.ssjg{
+    width: 100%;
+    height: 1rem;
+    padding: 0 0.3rem;
+}
+.ssjg p{
+    font-size: 0.2rem;
+    color: #fff;
+}
+.jg{
+    float: left;
+    font-size: 0.3rem;
+    color: #fff;
+    display: block;
+}
+.icon-msnui-more{
+    color: #fff;
+    float: right;
+}
+.huamian{
+    width: 6.9rem;
+    height: 3.45rem;
+    padding: 0.7rem 0;
+    margin-left: .3rem;
+    background: #fff;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    display: flex;
+}
+.tu{
+    width: 40%;
+    height: 100%;
+    padding-top: 0.28rem;
+}
+.huamian img{
+    width: 1.28rem;
+    height: 1.56rem;
+    float: right;
+}
+.nr{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+.nr span{
+    font-size: 0.35rem;
+    color: #009637;
+}
+.huan{
+    display: block;
+    font-size: 0.3rem;
+    color: #ccc;
+}
+.djs{
+    width: 100%;
+    height: .5rem;
+}
+.lsss{
+    width: 100%;
+    height: 1rem;
+    padding: 0 0.3rem;
+}
+.lsss p{
+    font-size: 0.2rem;
+    color: #666;
+}
+.lsss .jg{
+    float: left;
+    font-size: 0.3rem;
+    color: #666;
+    display: block;
+}
+.icon-msnui-more{
+    color: #666;
+    float: right;
+}
+.label{
+    width: 100%;
+    height: 2rem;
+    padding: 0 0.3rem;
+    margin-bottom: 0.4rem;
+}
+.label li{
+    width: 100%;
+    height: 33.333333%;
+    display: flex;
+}
+.label li a{
+    display: block;
+    margin-right: 0.3rem;
+    border-radius: 0.3rem;
+    line-height: 0.2rem;
+    color: #666;
+    padding: 0.1rem;
+    height: 80%;
+    border: 0.03rem solid #00A33C;
+    font-size: 0.3rem;
+    margin-top: 0.07rem;
+}
+.yuan{
+    width: 0.15rem;
+    height: 0.15rem;
+    background: #00A33C;
+}
+.bottom{
+    width: 100%;
+    height: 2.47rem;
+    padding: 0 .3rem;
+}
+.bottom li{
+    width: 45%;
+    height: 47%;
+    float: left;
+    background: #fff;
+    border-top: 0.1rem solid #009637;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+}
+.bottom li:nth-child(2n+1){
+    margin-right: 5%;
+}
+.bottom li:nth-child(2n){
+    margin-left: 5%;
+}
+.bottom li:nth-child(1),.bottom li:nth-child(2){
+    margin-bottom: 3%;
+}
+.bottom li:nth-child(3),.bottom li:nth-child(4){
+    margin-top: 3%;
+}
+.img{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.15rem;
+    float: left;
+}
+.img img{
+    width: 100%;
+    position: absolute;
+    top: -0.4rem;
+}
+.wen{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+.wen .yuedu{
+    display: block;
+    padding-left: 1.2rem;
+    color: #666;
+    font-size: 0.2rem;
+}
+.span1{
+    color: #00AB53;
+    font-size: 0.3rem;
+    display: block;
+    padding-left: 0.27rem;
+}
+.span2{
+    color: #ccc;
+    font-size: 0.25rem;
+    display: block;
+    padding-left: 0.3rem;
+}

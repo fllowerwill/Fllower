@@ -1,0 +1,124 @@
+@import url('base.css');
+.beijing{
+    width: 100%;
+    height: 1.08rem;
+    background: #009B38;
+}
+.sousuo{
+    width: 100%;
+    height: 1.08rem;
+    padding: 0.18rem 0.3rem;
+}
+.qx{
+    display: block;
+    color: #fff;
+    font-size: 0.32rem;
+    float: left;
+    line-height: 0.65rem;
+}
+#input{
+    width: 86%;
+    height: 0.64rem;
+    background: #fff;
+    line-height: 0.64rem;
+    display: block;
+    float: right;
+    border-radius: 0.25rem;
+    position: relative;
+}
+#input1{
+    width: 86%;
+    height: 0.64rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    outline: none;
+}
+.s1,.s2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: left;
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    left: 0.1rem;
+}
+.s1{
+    background: #00A13A;
+}
+.s2{
+    background: #FFA300;
+    left: 0.25rem;
+}
+.icon-huatong{
+    position: absolute;
+    right: 0.1rem;
+    color: #666;
+}
+section{
+    width: 6.4rem;
+    height: 5.88rem;
+    border-top: 0.06rem solid #009637;
+    border-bottom: 0.06rem solid #009637;
+    margin: 0.2rem auto;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+    border-radius: 0.15rem;
+}
+.biaoqian{
+    width: 100%;
+    height: 0.85rem;
+    background: #F5F4F3;
+    display: flex;
+}
+.biaoqian a{
+    display: block;
+    margin-right: 0.2rem;
+    margin-left: 0.3rem;
+    border-radius: 0.3rem;
+    line-height: 0.32rem;
+    color: #666;
+    padding: 0.1rem;
+    height: 70%;
+    border: 0.03rem solid #00A33C;
+    font-size: 0.3rem;
+    margin-top: 0.12rem;
+}
+.nr{
+    width: 100%;
+    height: 4.64rem;
+}
+.nr li{
+    width: 100%;
+    height: 33.333333%;
+    border-bottom: 0.02rem dotted #00AA48;
+    display: flex;
+}
+.img{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+}
+.img img{
+    height: 80%;
+}
+.right{
+    width: 70%;
+    height: 100%;
+}
+.right span{
+    display: block;
+    font-size: 0.28rem;
+    color: #3ABC6D;
+    padding-top: 0.2rem;
+}
+.right p{
+    font-size: 0.24rem;
+    color: #ccc;
+}

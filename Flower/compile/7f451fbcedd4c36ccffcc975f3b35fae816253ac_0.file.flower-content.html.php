@@ -1,0 +1,466 @@
+<?php
+/* Smarty version 3.1.30, created on 2018-01-18 08:04:02
+  from "D:\Desktop\www\Flower\template\index\flower-content.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5a6054f20e26a7_66191501',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '7f451fbcedd4c36ccffcc975f3b35fae816253ac' => 
+    array (
+      0 => 'D:\\Desktop\\www\\Flower\\template\\index\\flower-content.html',
+      1 => 1516262640,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a6054f20e26a7_66191501 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>
+flower-content.css">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>
+swiper.min.css">
+    <link rel="stylesheet" href="font/type-iconfont/iconfont.css">
+
+    <?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+rem.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="http://www.jq22.com/jquery/jquery-1.10.2.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+swiper.min.js"><?php echo '</script'; ?>
+>
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <a href='index.php?a=typelist' class="back"><img src="<?php echo IMG_PATH;?>
+type-back.png" alt=""></a>
+    <div class="title">鹤望兰</div>
+</header>
+
+<!--头部结束-->
+<!--banner开始-->
+<section class="banner">
+    <div class="container">
+        <div id="slide" class="slide" class="index-slide" alt="star">
+            <!-- 轮播图片数量可自行增减 -->
+            <div class="img"><img src="<?php echo IMG_PATH;?>
+4.png"/></div>
+            <div class="img"><img src="<?php echo IMG_PATH;?>
+1.png"/></div>
+            <div class="img"><img src="<?php echo IMG_PATH;?>
+5.png"/></div>
+            <div class="slide-bt"></div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--banner结束-->
+<!--信息开始-->
+<section class="infor">
+    <div class="infor-left">
+        <div class="inforlogo"><img src="<?php echo IMG_PATH;?>
+infor-logo.png" alt=""></div>
+        <div class="inforletter">植物信息</div>
+    </div>
+    <div class="infor-right">
+        <div class="inforbox">
+            <div class="infor-shou">收藏</div>
+           <div class="font icon-xingxing"></div>
+        </div>
+    </div>
+</section>
+<!--信息结束-->
+<!--描述开始-->
+<div class="desc">
+    <ul class="descbox">
+        <li class="heng1">
+            <div class="dian"></div>
+            <div class="descletter">鹤望兰</div>
+        </li>
+        <li class="heng1">
+            <div class="dian"></div>
+            <div class="descletter">15°C-20°C</div>
+        </li>
+        <li class="heng1">
+            <div class="dian"><img src="<?php echo IMG_PATH;?>
+shuidi.png" alt=""></div>
+            <div class="descletter">
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye2.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye2.png" alt=""> </div>
+            </div>
+        </li>
+        <li class="heng1">
+            <div class="dian"><img src="<?php echo IMG_PATH;?>
+yangguan.png" alt=""></div>
+            <div class="descletter">
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye1.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye2.png" alt=""> </div>
+                <div class="descimg"><img src="<?php echo IMG_PATH;?>
+ye2.png" alt=""> </div>
+            </div>
+        </li>
+    </ul>
+    <div class="tuijian">
+        <div class="tj-letter">推荐指数：</div>
+        <div class="font1 icon-xingxing"></div>
+        <div class="font1 icon-xingxing"></div>
+        <div class="font1 icon-xingxing"></div>
+        <div class="font1 icon-xingxing"></div>
+        <div class="font1 icon-xingxing"></div>
+    </div>
+</div>
+
+<!--描述结束-->
+<!--信息开始-->
+<section class="infor">
+    <div class="infor-left">
+        <div class="inforlogo"><img src="<?php echo IMG_PATH;?>
+infor-logo.png" alt=""></div>
+        <div class="inforletter">形态特征</div>
+    </div>
+</section>
+<!--信息结束-->
+
+<!--描述开始-->
+<div class="desc">
+    <div class="descbox1">
+    鹤望兰（学名：Strelitzia reginae Aiton）旅人蕉科多年生草本植物，无茎。叶片长圆状披针形，长25-45cm，宽10cm。叶片顶端急尖；叶柄细长。花数朵生于总花梗上，下托一佛焰苞；佛焰苞绿色，边紫红，萼片橙黄色，花瓣暗蓝色；雄蕊与花瓣等长；花药狭线形，花柱突出，柱头3。花期在冬季。
+    </div>
+    </div>
+
+<!--描述结束-->
+
+<!--信息开始-->
+<section class="infor">
+    <div class="infor-left">
+        <div class="inforlogo"><img src="<?php echo IMG_PATH;?>
+infor-logo.png" alt=""></div>
+        <div class="inforletter">养护宝典</div>
+    </div>
+</section>
+<!--信息结束-->
+<!--描述开始-->
+<div class="desc">
+    <li class="heng">
+        <div class="dian"></div>
+        <div class="descletter">浇灌秘籍——不宜用太急的水流</div>
+    </li>
+    <li class="heng">
+        <div class="dian"></div>
+        <div class="descletter">注意光照——光照充足搬到室外</div>
+    </li>
+    <li class="heng">
+        <div class="dian"></div>
+        <div class="descletter">培土原则——不宜用太急的水流</div>
+    </li>
+    <li class="heng">
+        <div class="dian"></div>
+        <div class="descletter">注意事项——光照充足搬到室外</div>
+    </li>
+</div>
+
+<!--描述结束-->
+
+<div class="jiange"></div>
+
+
+<!--推荐植物开始-->
+
+<section class="tj">
+    <div class="tuijiantitle">
+        <div class="title1">
+            <div class="titlimg"><img src="<?php echo IMG_PATH;?>
+tuijian.png" alt=""></div>
+            <div class="tjletter">推荐植物</div>
+        </div>
+        <div class="title2">LATEST ATTENTION</div>
+    </div>
+
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="tjbox">
+                    <div class="tjboximg"><img src="<?php echo IMG_PATH;?>
+tu.png" alt=""></div>
+                    <div class="tjdi">风信子</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="tjbox">
+                    <div class="tjboximg"><img src="<?php echo IMG_PATH;?>
+tu.png" alt=""></div>
+                    <div class="tjdi">风信子</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="tjbox">
+                    <div class="tjboximg"><img src="<?php echo IMG_PATH;?>
+tu.png" alt=""></div>
+                    <div class="tjdi">风信子</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="tjbox">
+                    <div class="tjboximg"><img src="<?php echo IMG_PATH;?>
+tu.png" alt=""></div>
+                    <div class="tjdi">风信子</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="tjbox">
+                    <div class="tjboximg"><img src="<?php echo IMG_PATH;?>
+tu.png" alt=""></div>
+                    <div class="tjdi">风信子</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!--推荐植物结束-->
+
+</body>
+</html>
+<?php echo '<script'; ?>
+>
+    var autoLb = false;          //autoLb=true为开启自动轮播
+    var autoLbtime = 1;         //autoLbtime为轮播间隔时间（单位秒）
+    var touch = true;           //touch=true为开启触摸滑动
+    var slideBt = true;         //slideBt=true为开启滚动按钮
+
+
+    var slideNub;               //轮播图片数量
+
+    //窗口大小改变时改变轮播图宽高
+    $(window).resize(function(){
+        $(".slide").height($(".slide").width()*0.56);
+    });
+
+
+    $(function(){
+        $(".slide").height($(".slide").width()*0.56);
+        slideNub = $(".slide .img").size();             //获取轮播图片数量
+        for(i=0;i<slideNub;i++){
+            $(".slide .img:eq("+i+")").attr("data-slide-imgId",i);
+        }
+
+
+        //根据轮播图片数量设定图片位置对应的class
+        if(slideNub==1){
+            for(i=0;i<slideNub;i++){
+                $(".slide .img:eq("+i+")").addClass("img3");
+            }
+        }
+        if(slideNub==2){
+            for(i=0;i<slideNub;i++){
+                $(".slide .img:eq("+i+")").addClass("img"+(i+3));
+            }
+        }
+        if(slideNub==3){
+            for(i=0;i<slideNub;i++){
+                $(".slide .img:eq("+i+")").addClass("img"+(i+2));
+            }
+        }
+        if(slideNub>3&&slideNub<6){
+            for(i=0;i<slideNub;i++){
+                $(".slide .img:eq("+i+")").addClass("img"+(i+1));
+            }
+        }
+        if(slideNub>=6){
+            for(i=0;i<slideNub;i++){
+                if(i<5){
+                    $(".slide .img:eq("+i+")").addClass("img"+(i+1));
+                }else{
+                    $(".slide .img:eq("+i+")").addClass("img5");
+                }
+            }
+        }
+
+
+        //根据轮播图片数量设定轮播图按钮数量
+        if(slideBt){
+            for(i=1;i<=slideNub;i++){
+                $(".slide-bt").append("<span data-slide-bt='"+i+"' onclick='tz("+i+")'></span>");
+            }
+            $(".slide-bt").width(slideNub*34);
+            $(".slide-bt").css("margin-left","-"+slideNub*17+"px");
+        }
+
+
+        //自动轮播
+        if(autoLb){
+            setInterval(function(){
+                right();
+            }, autoLbtime*1000);
+        }
+
+
+        if(touch){
+            k_touch();
+        }
+        slideLi();
+        imgClickFy();
+    })
+
+
+    //右滑动
+    function right(){
+        var fy = new Array();
+        for(i=0;i<slideNub;i++){
+            fy[i]=$(".slide .img[data-slide-imgId="+i+"]").attr("class");
+        }
+        for(i=0;i<slideNub;i++){
+            if(i==0){
+                $(".slide .img[data-slide-imgId="+i+"]").attr("class",fy[slideNub-1]);
+            }else{
+                $(".slide .img[data-slide-imgId="+i+"]").attr("class",fy[i-1]);
+            }
+        }
+        imgClickFy();
+        slideLi();
+    }
+
+
+    //左滑动
+    function left(){
+        var fy = new Array();
+        for(i=0;i<slideNub;i++){
+            fy[i]=$(".slide .img[data-slide-imgId="+i+"]").attr("class");
+        }
+        for(i=0;i<slideNub;i++){
+            if(i==(slideNub-1)){
+                $(".slide .img[data-slide-imgId="+i+"]").attr("class",fy[0]);
+            }else{
+                $(".slide .img[data-slide-imgId="+i+"]").attr("class",fy[i+1]);
+            }
+        }
+        imgClickFy();
+        slideLi();
+    }
+
+
+    //轮播图片左右图片点击翻页
+    function imgClickFy(){
+        $(".slide .img").removeAttr("onclick");
+        $(".slide .img2").attr("onclick","left()");
+        $(".slide .img4").attr("onclick","right()");
+    }
+
+
+    //修改当前最中间图片对应按钮选中状态
+    function slideLi(){
+        var slideList = parseInt($(".slide .img3").attr("data-slide-imgId")) + 1;
+        $(".slide-bt span").removeClass("on");
+        $(".slide-bt span[data-slide-bt="+slideList+"]").addClass("on");
+    }
+
+
+    //轮播按钮点击翻页
+    function tz(id){
+        var tzcs = id - (parseInt($(".slide .img3").attr("data-slide-imgId")) + 1);
+        if(tzcs>0){
+            for(i=0;i<tzcs;i++){
+                setTimeout(function(){
+                    right();
+                },1);
+            }
+        }
+        if(tzcs<0){
+            tzcs=(-tzcs);
+            for(i=0;i<tzcs;i++){
+                setTimeout(function(){
+                    left();
+                },1);
+            }
+        }
+        slideLi();
+    }
+
+
+    //触摸滑动模块
+    function k_touch() {
+        var _start = 0, _end = 0, _content = document.getElementById("slide");
+        _content.addEventListener("touchstart", touchStart, false);
+        _content.addEventListener("touchmove", touchMove, false);
+        _content.addEventListener("touchend", touchEnd, false);
+        function touchStart(event) {
+            var touch = event.targetTouches[0];
+            _start = touch.pageX;
+        }
+        function touchMove(event) {
+            var touch = event.targetTouches[0];
+            _end = (_start - touch.pageX);
+        }
+
+        function touchEnd(event) {
+            if (_end < -100) {
+                left();
+                _end=0;
+            }else if(_end > 100){
+                right();
+                _end=0;
+            }
+        }
+    }
+
+
+<?php echo '</script'; ?>
+>
+
+
+
+<!--下面轮播-->
+<?php echo '<script'; ?>
+>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+<?php echo '</script'; ?>
+><?php }
+}

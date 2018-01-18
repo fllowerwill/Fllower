@@ -1,0 +1,114 @@
+@import "base.css";
+header{
+    width: 100%;
+    height: 1.54rem;
+    padding: 0.64rem 0.24rem 0 0.24rem;
+    background: #1aa22a;
+    display: flex;
+    justify-content: space-between;
+}
+.colFan{
+    width: 0.22rem;
+    height: 0.38rem;
+    font-size: 0.38rem;
+    line-height: 0.38rem;
+    font-weight: 600;
+    font-family: '宋体';
+    color: #fff;
+}
+.colZI{
+    width: auto;
+    height: 0.4rem;
+    font-size: 0.32rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+.colDao{
+    width: 4.06rem;
+    height: 0.72rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 1.18rem;
+    border-radius: 0.36rem;
+    border: 0.03rem solid #91b597;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colDao-son{
+    width: 1.9rem;
+    height: 0.52rem;
+    border:  0.03rem solid #fff;
+    background:#fff;
+    color: #1aa22a;
+    border-radius: 0.26rem;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.son1{
+    border:  0.03rem solid #91b597;
+    background:#1aa22a;
+    color: #fff;
+}
+.colDao-sond{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.colDao-son p{
+    font-size: 0.18rem;
+    text-align: center;
+    line-height: 0.46rem;
+}
+.main{
+    width: 100%;
+    height: auto;
+    padding: 0 0.24rem;
+}
+.colMain-top{
+    width: 100%;
+    height: 0.48rem;
+    padding: 0.1rem 0 ;
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.colMain-top p{
+    font-size: 0.28rem;
+    color: #333;
+    line-height: 0.28rem;
+}
+.colMain-top p span{
+    font-size: 0.18rem;
+    color: #333;
+    line-height: 0.28rem;
+}
+.colMain-conter{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.colMain-pic{
+    width: 2.2rem;
+    height: 3.4rem;
+    border-radius: 0.06rem;
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+}
+.colMain-pic img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}

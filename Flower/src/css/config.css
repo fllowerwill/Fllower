@@ -1,0 +1,243 @@
+
+header{
+    height: 2.96rem;
+    width:100%;
+    background: #1a9d28;
+    position: relative;
+    overflow: hidden;
+}
+.banner-box{
+    width:7.02rem;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0.24rem;
+}
+header>img{
+    display: block;
+    width:60%;
+    position: absolute;
+    top:0px;
+    right:-0.35rem;
+    mix-blend-mode:multiply;
+}
+.banner-top{
+    width:100%;
+    height:1.9rem;
+    display: flex;
+}
+.tx{
+    height: 100%;
+    width:1.45rem;
+    display: flex;
+    align-items: center;
+}
+.tx>div{
+    width:1.29rem;
+    height: 1.29rem;
+    position:relative;
+}
+.cir1{
+    width:1.05rem;
+    height:1.29rem;
+    background: #ffffff;
+    opacity: 0.5;
+    border-radius: 50% / 50%;
+    position: absolute;
+    top:0rem;
+    left: 0.09rem;
+    transform:rotate(50deg);
+}
+.cir2{
+    width:1.05rem;
+    height:1.29rem;
+    background: #ffffff;
+    opacity: 0.3;
+    border-radius: 50% / 50%;
+    position: absolute;
+    top:0;
+    left:0.09rem;
+    transform:rotate(-50deg);
+}
+.cir3{
+    width:1rem;
+    height:1.24rem;
+    background: #fff;
+    opacity: 0.4;
+    border-radius: 50% / 50%;
+    position: absolute;
+    top:0.03rem;
+    left:0.09rem;
+    transform:rotate(50deg);
+}
+.cir4{
+    width:1.04rem;
+    height: 1.04rem;
+    border:0.04rem solid #ffffff;
+    box-sizing: border-box;
+    background: #ffdd29;
+    position: absolute;
+    top:0.1rem;
+    left:0.09rem;
+    border-radius: 50%;
+}
+.cir4 img{
+    display: block;
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.name-box{
+    width:calc(100% - 1.45rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.name-box .name{
+    width:100%;
+    height:0.6rem;
+}
+.name-box .name div:nth-child(1){
+    width:100%;
+    height: 50%;
+    color: #ffffff;
+    font-size: 0.25rem;
+    line-height:0.3rem;
+}
+.name-box .name div:nth-child(2){
+    width:100%;
+    height: 50%;
+    color: #ffffff;
+    font-size: 0.14rem;
+    line-height: 0.3rem;
+}
+.banner-bottom{
+    width:100%;
+    height: 1.06rem;
+    display: flex;
+    align-items: center;
+}
+.news-box{
+    height: 0.54rem;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.news-box-1{
+    width:33%;
+    height: 100%;
+    /*border-right: 1px solid #ffffff;*/
+    box-sizing:border-box;
+}
+.count{
+    width:0.8rem;
+    height:100%;
+    font-size: 0.44rem;
+    color:#29dbbc;
+    text-align: right;
+    padding-right: 0.02rem;
+    text-align:right;
+}
+.word-box{
+    width:calc(100% - 0.8rem);
+    height:100%;
+}
+.word{
+    width:100%;
+    height: 50%;
+    color: #ffffff;
+    font-size: 0.2rem;
+    text-align:left;
+}
+.ename{
+    width:100%;
+    height:50%;
+    color:rgba(255,255,255,0.5);
+    font-size: 0.14rem;
+    text-align: left;
+}
+.news-box-1> a{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.news-box-1 span{
+    display:block;
+    width:0.04rem;
+    height:0.28rem;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.gz{
+    color:#cd8088;
+}
+.jf{
+   color: #caa128;
+}
+.main{
+    width:7.5rem;
+    height: 8.35rem;
+    margin:0 auto;
+    background: #fafafa;
+    overflow: hidden;
+}
+.collection{
+    width:7.02rem;
+    height: 1.17rem;
+    margin: 0 auto;
+    background: #ffffff;
+    display: flex;
+    margin-top:0.24rem;
+    justify-content: space-between;
+}
+.star{
+    width:1.1rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star > img{
+    display: block;
+    width:0.61rem;
+    height: 0.61rem;
+}
+.mycol{
+    width:4.96rem;
+    height: 100%;
+}
+.mycol div:first-child{
+    width:100%;
+    height: 50%;
+    font-size: 0.24rem;
+    line-height:0.8rem ;
+    color: #000000;
+}
+.mycol div:nth-child(2){
+    width:100%;
+    height: 50%;
+    font-size:0.24rem;
+    vertical-align:top;
+    color:rgba(0,0,0,0.5);
+}
+.mjt{
+    width:calc(100% - 4.96rem - 1.1rem);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mjt  img{
+    display: block;
+    width:0.68rem;
+    height: 0.38rem;
+}
