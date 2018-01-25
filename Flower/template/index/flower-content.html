@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{CSS_PATH}flower-content.css">
     <link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
-    <link rel="stylesheet" href="font/type-iconfont/iconfont.css">
+    <link rel="stylesheet" href="{FONT_PATH}type-iconfont/iconfont.css">
 
     <script src="{JS_PATH}rem.js"></script>
     <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
@@ -17,8 +17,8 @@
 <body>
 <!--头部开始-->
 <header>
-    <a href='index.php?a=typelist' class="back"><img src="{IMG_PATH}type-back.png" alt=""></a>
-    <div class="title">鹤望兰</div>
+    <a href="javascript:history.back();" class="back"><img src="{IMG_PATH}type-back.png" alt=""></a>
+    <div class="title">{$arr['name']}</div>
 </header>
 
 <!--头部结束-->
@@ -27,9 +27,9 @@
     <div class="container">
         <div id="slide" class="slide" class="index-slide" alt="star">
             <!-- 轮播图片数量可自行增减 -->
-            <div class="img"><img src="{IMG_PATH}4.png"/></div>
-            <div class="img"><img src="{IMG_PATH}1.png"/></div>
-            <div class="img"><img src="{IMG_PATH}5.png"/></div>
+            <div class="img"><img src="{$arr['img1']}"/></div>
+            <div class="img"><img src="{$arr['img2']}"/></div>
+            <div class="img"><img src="{$arr['img3']}"/></div>
             <div class="slide-bt"></div>
         </div>
     </div>
@@ -57,40 +57,34 @@
     <ul class="descbox">
         <li class="heng1">
             <div class="dian"></div>
-            <div class="descletter">鹤望兰</div>
+            <div class="descletter">{$arr['name']}</div>
         </li>
         <li class="heng1">
             <div class="dian"></div>
-            <div class="descletter">15°C-20°C</div>
+            <div class="descletter">{$arr['temp']}</div>
         </li>
         <li class="heng1">
             <div class="dian"><img src="{IMG_PATH}shuidi.png" alt=""></div>
             <div class="descletter">
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye2.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye2.png" alt=""> </div>
+                {for $i=1 to {$arr['humi']}}
+                    <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""></div>
+                {/for}
             </div>
         </li>
         <li class="heng1">
             <div class="dian"><img src="{IMG_PATH}yangguan.png" alt=""></div>
             <div class="descletter">
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye2.png" alt=""> </div>
-                <div class="descimg"><img src="{IMG_PATH}ye2.png" alt=""> </div>
+                {for $i=1 to {$arr['light']}}
+                <div class="descimg"><img src="{IMG_PATH}ye1.png" alt=""></div>
+                {/for}
             </div>
         </li>
     </ul>
     <div class="tuijian">
         <div class="tj-letter">推荐指数：</div>
+        {for $i=1 to {$arr['reco']}}
         <div class="font1 icon-xingxing"></div>
-        <div class="font1 icon-xingxing"></div>
-        <div class="font1 icon-xingxing"></div>
-        <div class="font1 icon-xingxing"></div>
-        <div class="font1 icon-xingxing"></div>
+        {/for}
     </div>
 </div>
 
@@ -107,9 +101,9 @@
 <!--描述开始-->
 <div class="desc">
     <div class="descbox1">
-    鹤望兰（学名：Strelitzia reginae Aiton）旅人蕉科多年生草本植物，无茎。叶片长圆状披针形，长25-45cm，宽10cm。叶片顶端急尖；叶柄细长。花数朵生于总花梗上，下托一佛焰苞；佛焰苞绿色，边紫红，萼片橙黄色，花瓣暗蓝色；雄蕊与花瓣等长；花药狭线形，花柱突出，柱头3。花期在冬季。
+    {$arr['descs']}
     </div>
-    </div>
+</div>
 
 <!--描述结束-->
 
@@ -133,7 +127,8 @@
     </li>
     <li class="heng">
         <div class="dian"></div>
-        <div class="descletter">培土原则——不宜用太急的水流</div>
+        <div class="descletter">培土原则——不宜用
+            太急的水流</div>
     </li>
     <li class="heng">
         <div class="dian"></div>
@@ -161,36 +156,14 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
+            {foreach $brr as $item}
             <div class="swiper-slide">
                 <div class="tjbox">
-                    <div class="tjboximg"><img src="{IMG_PATH}tu.png" alt=""></div>
-                    <div class="tjdi">风信子</div>
+                    <div class="tjboximg"><img src="{$item['img2']}" alt=""></div>
+                    <div class="tjdi">{$item['name']}</div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="tjbox">
-                    <div class="tjboximg"><img src="{IMG_PATH}tu.png" alt=""></div>
-                    <div class="tjdi">风信子</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="tjbox">
-                    <div class="tjboximg"><img src="{IMG_PATH}tu.png" alt=""></div>
-                    <div class="tjdi">风信子</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="tjbox">
-                    <div class="tjboximg"><img src="{IMG_PATH}tu.png" alt=""></div>
-                    <div class="tjdi">风信子</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="tjbox">
-                    <div class="tjboximg"><img src="{IMG_PATH}tu.png" alt=""></div>
-                    <div class="tjdi">风信子</div>
-                </div>
-            </div>
+            {/foreach}
         </div>
     </div>
 

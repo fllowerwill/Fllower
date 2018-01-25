@@ -165,33 +165,39 @@ header{
 main{
     background: #f5f5f5;
     width: 100%;
+    height: 7.25rem;
     padding-top: 0.05rem;
-    display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
 }
-.heng {
-    width:100% ;
-    height: 2.37rem;
+.lie{
+    width: 1.84rem;
+    height: 2.35rem;
+    float: left;
+    /*background: red ;*/
 
-    border-radius: 0.03rem;
-    margin-top:0.05rem ;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
+
 }
 .box1{
-    width: 25%;
+    width: 100%;
     height: 100%;
     background: #189727;
     padding-top: 0.55rem;
+    margin-right: 0.05rem;
+    margin-bottom: 0.05rem;
+
 }
 .manlogo{
+
     width: 0.42rem;
     height:0.4rem ;
     margin-top: 0.65rem;
     margin: 0 auto;
     margin-bottom: 0.28rem;
+
+    font-family:"iconfont" !important;
+    font-size:0.5rem;
+    color: white;
+    font-weight: bold;
+    font-style:normal;
 }
 .manlogo img{
     width: 100%;
@@ -208,21 +214,31 @@ main{
     justify-content: center;
 
 }
+.liebiao{
+    width: 5.62rem;
+    height: 100%;
+    float: right;
+    padding: 0.04rem;
+    display: none;
+}
 
 .box2{
     display: block;
     padding-top: 0.36rem;
-    padding-right: 0.08rem;
+    padding-right: 0.02rem;
     background: #fff;
-    width: 1.8rem;
+    width: 1.78rem;
     height: 2.32rem;
+    float: left;
+    margin-right: 0.05rem;
+    margin-bottom: 0.07rem;
 
 }
 .box2img{
     width: 0.66rem;
     height: 0.74rem;
     margin: 0 auto;
-    margin-bottom: 0.31rem;
+    margin-bottom: 0.2rem;
 }
 .box2img img{
     width: 100%;
@@ -234,7 +250,7 @@ main{
     color:#666665 ;
     display: flex;
     justify-content: center;
-    margin-bottom: 0.17rem;
+    margin-bottom: 0.1rem;
 }
 
 .box2english{
@@ -244,117 +260,16 @@ main{
     justify-content: center;
 }
 
+.lb-active{
+    display: block;
+}
 
-
-
+.box-active{
+    background:#1fb130 ;
+}
 
 
 
 
 /*<!--主体结束-->*/
 
-.tabs-vertical{
-    font: bold 13px sans-serif;
-    background-color: #1aa22a ;
-    max-width: 580px;
-    text-align: center;
-    border-radius: 2px;
-    height: auto;
-}
-
-/* The tabs */
-
-.tabs-vertical ul{
-    float: left;
-    list-style: none;
-    text-align: left;
-    margin: 0;
-    padding-left: 0;
-}
-
-.tabs-vertical ul li{
-    width: 1.84rem;
-    background: #fff;
-    height: 2.42rem;
-    margin-right: -1px;
-    border: 1px solid #f5f5f5;
-
-
-}
-
-.tabs-vertical ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #189727;
-    padding-top: 0.55rem;
-}
-
-.tabs-vertical ul li a.tab-active {
-    border-color: #dddddd;
-    background: #1fb130;
-    box-shadow: 0px 2px 0px #EFEFEF;
-}
-
-.tabs-vertical ul li:first-child a{
-    border-top: 0;
-}
-
-/* The content */
-
-.tabs-vertical .tabs-content-placeholder{
-    overflow: hidden;
-    height: 7.25rem;
-    border-left: 1px solid #dddddd;
-    font-weight: normal;
-    background: #f5f5f5;
-    margin: 0 auto;
-    text-align: center;
-    padding:0.04rem ;
-    border: 0.02rem solid #f5f5f5;
-}
-
-.tabs-vertical .tabs-content-placeholder .li{
-    display: none;
-}
-
-.tabs-vertical .tabs-content-placeholder div.tab-content-active{
-    display: block;
-}
-
-/*@media (max-width: 600px) {*/
-
-    /*.tabs-vertical ul{*/
-
-    /*}*/
-
-    /*.tabs-vertical ul li{*/
-
-        /*margin-bottom: -1px;*/
-    /*}*/
-
-    /*.tabs-vertical ul li a{*/
-        /*border: 1px solid transparent;*/
-        /*border-bottom: 0;*/
-        /*border-top: 0;*/
-        /*padding: 12px 15px;*/
-    /*}*/
-
-    /*.tabs-vertical ul li a.tab-active {*/
-        /*border-color: #dddddd;*/
-        /*background-color: #1fb130;*/
-        /*box-shadow: 2px 0px 0px #EFEFEF;*/
-    /*}*/
-
-    /*.tabs-vertical ul li:first-child a{*/
-        /*border-left: 0;*/
-    /*}*/
-
-    /*.tabs-vertical .tabs-content-placeholder{*/
-        /*padding: 15px 30px 30px;*/
-        /*border-left: 0;*/
-        /*border-top: 1px solid #dddddd;*/
-        /*box-shadow: 0px -3px 0px #F3F3F3;*/
-    /*}*/
-
-/*}*/

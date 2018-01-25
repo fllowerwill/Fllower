@@ -33,22 +33,14 @@
 //
 //}
 //$obj=new db();
-
-
-
-
 class db{
     private $host='localhost';
     private $username='root';
     private $pass='';
-    private $dbname='comany';
+    private $dbname='flower';
     private $port='3306';
     public $table='user';
     public $db='';
-
-
-
-
    function __construct($table)
    {
        $this->db=new mysqli($this->host,$this->username,$this->pass,$this->dbname,$this->port);

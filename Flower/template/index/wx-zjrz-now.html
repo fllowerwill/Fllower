@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wx-专家认证-基本信息</title>
+    <link rel="stylesheet" href="{CSS_PATH}base.css">
+    <link rel="stylesheet" href="{CSS_PATH}wx-zjrz-1.css">
+    <script src="{JS_PATH}rem.js"></script>
+    <script src="{JS_PATH}jquery.min.js"></script>
+    <script src="{JS_PATH}jquery.validate.min.js"></script>
+    <script src="{JS_PATH}data.js"></script>
+</head>
+<style>
+    .main>.photo>.bottom>.zp{
+        width:1.34rem;
+        height: 1.5rem;
+        float: left;
+        background: url("{IMG_PATH}11.jpg") no-repeat center center;
+        background-size: 100% 100%;
+    }
+    .now{
+        background:rgba(0,0,0,0.6);
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right:0;
+        margin:auto;
+        font-size: 0.45rem;
+        color: #ffffff;
+        text-align: center;
+        line-height:12rem;
+        z-index: 1;
+    }
+</style>
+<body>
+    <div class="now">已提交，正在认证!</div>
+    <div class="cir"></div>
+    <div class="rz-title">
+        <a href="index.php?a=mrrPre" class="yjt"><img src="{IMG_PATH}return.png" alt=""></a>
+        <span>专家认证</span>
+    </div>
+    <div class="lc">
+        <div class="lc-top">
+            <div class="circle1">
+                <div class="circle2">
+                    <div class="circle3">
+                        <div class="circle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="xian"></div>
+            <div class="circle11">
+                <div class="circle2">
+                    <div class="circle3">
+                        <div class="circle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="xian"></div>
+            <div class="circle11">
+                <div class="circle2">
+                    <div class="circle3">
+                        <div class="circle4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lc-botttom">
+            <div class="word-box">
+                <span>01.基本信息</span>
+                <span>02.专业信息</span>
+                <span>03.审核成功</span>
+            </div>
+        </div>
+    </div>
+    <div class="jbs"></div>
+    <form id="vlform">
+    <div class="main">
+            <div class="photo">
+                <div class="top">
+                    <p>照片 </p>
+                    <p>&nbsp;PHOTOS</p>
+                </div>
+                <div class="bottom">
+                    <div class="zp"></div>
+                    <div class="addzp">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="per">
+                <div class="per-name">
+                    姓名<span>&nbsp;NAME</span>
+                </div>
+                <label for="user"></label>
+                <input type="text" id="user" class="name" name="user" value="{$name}" readonly>
+            </div>
+            <div class="per">
+                <div class="per-name">
+                    姓名<span>&nbsp;NAME</span>
+                </div>
+                <label for="sel"></label>
+                <select name="sex" id="sel">
+                    <option value="" selected="selected">请选择</option>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+        <div class="per">
+            <div class="per-name">
+                生日<span>BIRTHDAY</span>
+            </div>
+            <div class="choice">
+                <label for="bir"></label>
+                <input type="date" id="bir" name="bir">
+            </div>
+        </div>
+        <div class="per">
+            <div class="per-name">
+                手机号<span>&nbsp;MOBILE NUMBER</span>
+            </div>
+            <label for="phone"></label>
+            <input type="text" name="phone" id="phone" class="name">
+        </div>
+        <div class="next">
+            <button type="submit">下一步 <img src="{IMG_PATH}next.png" alt=""></button>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+<script>
+    var num=1;
+    function subtract() {
+        num--;
+        if(num==0){
+            location.href='index.php?a=mrrPre';
+        }
+    }
+    var t=setInterval(subtract,1000);
+</script>

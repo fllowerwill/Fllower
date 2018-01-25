@@ -21,13 +21,13 @@
 <div class="banner">
     <div class="intSign">签到</div>
     <div class="intZi">
-        <div class="intZi-top">386</div>
+        <div class="intZi-top">{$arr['jifen']}</div>
         <div class="intZi-conter">
             <div></div>
             <p>我的积分</p>
             <div></div>
         </div>
-        <div class="intZi-bottom">连续签到：<span>4</span>天</div>
+        <div class="intZi-bottom">连续签到：<span></span>天</div>
     </div>
     <div class="Sign">
         <div class="Sign-top">
@@ -64,7 +64,7 @@
 </div>
 <main>
     <div class="intMain">
-        <div class="intMain-son dian">
+        <div class="intMain-son">
             <div class="intMain-yuan"></div>
             <div class="intMain-zi">
                 <p class="a1">可兑换商品</p>
@@ -82,21 +82,23 @@
         </div>
     </div>
     <div class="intMain-content" style="display: block;">
+        {foreach $brr as $b}
         <div class="content">
             <div class="intMain-contop">
-                <p class="contop1">野生吊兰</p>
+
+                <p class="contop1">{$b['name']}</p>
                 <div class="contop2">
                     <img src="{IMG_PATH}mrr7.png" alt="">
                     <p>50积分</p>
                 </div>
             </div>
             <div class="intMain-concenter">
-                <img src="{IMG_PATH}mrr10.png" alt="">
+                <img src="{$b['img1']}" alt="">
             </div>
             <div class="intMain-conbottom">
                 <div class="conbottom1">
                     <div></div>
-                    <p>面对阻碍不屈不挠</p>
+                    <p>{$b['says']}</p>
                     <div></div>
                 </div>
                 <div class="conbottom2">
@@ -104,13 +106,13 @@
                         <div class="img">
                             <img src="{IMG_PATH}mrr8.png" alt="">
                         </div>
-                        <p>2735</p>
+                        <p>{$b['likes']}</p>
                     </div>
                     <div class="conbottom2-son">
                         <div class="img">
                             <img src="{IMG_PATH}mrr9.png" alt="">
                         </div>
-                        <p>4286</p>
+                        <p>{$b['share']}</p>
                     </div>
                 </div>
             </div>
@@ -121,12 +123,13 @@
                 <div class="exRight">兑换</div>
             </div>
         </div>
-        <div class="content">
+        {/foreach}
+        <!--<div class="content">
             <div class="intMain-contop">
-                <p class="contop1">野生吊兰</p>
+                <p class="contop1">{$b['name']}</p>
                 <div class="contop2">
                     <img src="{IMG_PATH}mrr7.png" alt="">
-                    <p>50积分</p>
+                    <p>{$arr['jifen']}积分</p>
                 </div>
             </div>
             <div class="intMain-concenter">
@@ -135,7 +138,7 @@
             <div class="intMain-conbottom">
                 <div class="conbottom1">
                     <div></div>
-                    <p>面对阻碍不屈不挠</p>
+                    <p>{$arr['says']}</p>
                     <div></div>
                 </div>
                 <div class="conbottom2">
@@ -143,13 +146,13 @@
                         <div class="img">
                             <img src="{IMG_PATH}mrr8.png" alt="">
                         </div>
-                        <p>2735</p>
+                        <p>{$b['likes']}</p>
                     </div>
                     <div class="conbottom2-son">
                         <div class="img">
                             <img src="{IMG_PATH}mrr9.png" alt="">
                         </div>
-                        <p>4286</p>
+                        <p>{$b['share']}</p>
                     </div>
                 </div>
             </div>
@@ -159,24 +162,25 @@
                 </div>
                 <div class="exRight">兑换</div>
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="intMain-content">
+        {foreach $crr as $c}
         <div class="content">
             <div class="intMain-contop">
-                <p class="contop1">野生吊兰</p>
+                <p class="contop1">{$c['name']}</p>
                 <div class="contop2">
                     <img src="{IMG_PATH}mrr7.png" alt="">
-                    <p>50积分</p>
+                    <p>120积分</p>
                 </div>
             </div>
             <div class="intMain-concenter">
-                <img src="{IMG_PATH}mrr10.png" alt="">
+                <img src="{$c['img1']}" alt="">
             </div>
             <div class="intMain-conbottom">
                 <div class="conbottom1">
                     <div></div>
-                    <p>面对阻碍不屈不挠</p>
+                    <p>{$c['says']}</p>
                     <div></div>
                 </div>
                 <div class="conbottom2">
@@ -184,7 +188,7 @@
                         <div class="img">
                             <img src="{IMG_PATH}mrr12.png" alt="">
                         </div>
-                        <p>2017-10-25</p>
+                        <p>{$c['time']}</p>
                     </div>
                 </div>
             </div>
@@ -195,6 +199,7 @@
                 <div class="exRight">兑换</div>
             </div>
         </div>
+        {/foreach}
     </div>
 </main>
 </body>

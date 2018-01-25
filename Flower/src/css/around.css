@@ -27,6 +27,7 @@ header{
     font-weight: 500;
     color: #ffffff;
     letter-spacing: .05rem;
+    text-align: center;
     z-index: 11;
 }
 .help{

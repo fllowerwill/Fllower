@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收藏列表</title>
+    <link rel="stylesheet" href="{CSS_PATH}aroundshop.css">
+    <link rel="stylesheet" href="{FONT_PATH}iconfont/iconfont.css">
+    <link rel="stylesheet" href="{FONT_PATH}mls_iconfont/iconfont.css">
+    <script src='{JS_PATH}rem.js'></script>
+    <script src='{JS_PATH}jquery.min.js'></script>
+</head>
+<body>
+<header>
+    <a href='index.php?a=mrrPre' class="colFan">&lt;</a>
+    <div class="colZI">周围</div>
+    <a href="index.php?a=search2" class="colFan"><i class="icon icon-iconsmallsearch"></i></a>
+</header>
+<main>
+    <div class="collect_article">
+        <section class='shop_module'>
+            <ul class="attention_list">
+                {foreach $arr as $a}
+                <li>
+                    <a href="index.php?a=around&id={$a['id']}">
+                    <div class="attention_pic">
+                        {foreach $a['next'] as $v}
+                            {if $v@index eq 0}
+                            <img src="{$v['img1']}" alt="">
+                            {/if}
+                        {/foreach}
+                    </div>
+                    <div class="attention_content">
+                        <div class="content_title">
+                            {$a['name']}
+                        </div>
+                        <div class="underline">
+                            <div class='underline_box'></div>
+                            <div class="underline_line"></div>
+                        </div>
+                        <div class="title_chinese">
+                        </div>
+                        <div class="title_english">
+                            {$a['title']}
+                        </div>
+                        <div class="content_footer">
+                            <span class="series">{$a['dis']}</span>
+                            <div class="like_collect">
+                                <img src="{IMG_PATH}hfy_like.png" alt="">
+                                &nbsp;
+                                <span>{$a['likes']}</span>
+                                &nbsp;&nbsp;
+                                <img src="{IMG_PATH}hfy_collect.png" alt="">
+                                &nbsp;
+                                <span>{$a['share']}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="attention_page">
+                    </div>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </section>
+    </div>
+
+    <!--<div class="collect_image">-->
+        <!--<div class="collect_pic">-->
+            <!--<div class="colMain-top">-->
+                <!--<p>Today&nbsp;<span>2017-11-8</span></p>-->
+                <!--<p>Select</p>-->
+            <!--</div>-->
+            <!--<div class="colMain-conter">-->
+
+                <!--<div class="colMain-pic">-->
+                    <!--<div class="colMain_shade">-->
+                        <!--<div class="colMain_shade">-->
+                            <!--<div class="shade_circle">-->
+                                <!--<i class="iconfont icon-htmal5icon22"></i>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="collect_pic">-->
+            <!--<div class="colMain-top">-->
+                <!--<p>Today&nbsp;<span>2017-11-8</span></p>-->
+                <!--<p>Select</p>-->
+            <!--</div>-->
+            <!--<div class="colMain-conter">-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="collect_pic">-->
+            <!--<div class="colMain-top">-->
+                <!--<p>Today&nbsp;<span>2017-11-8</span></p>-->
+                <!--<p>Select</p>-->
+            <!--</div>-->
+            <!--<div class="colMain-conter">-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="colMain-pic">-->
+                    <!--<img src="{IMG_PATH}mrr6.png" alt="">-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</main>
+</body>
+</html>

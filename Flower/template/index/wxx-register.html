@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{FONT_PATH}font3/iconfont.css">
     <link rel="stylesheet" href="{CSS_PATH}bootstrap.css">
     <script src="{JS_PATH}rem.js"></script>
+    <script src="{JS_PATH}jquery.js"></script>
+    <script src="{JS_PATH}jquery.validate.min.js"></script>
     <title>注册页</title>
     <style>
         .form-horizontal{
@@ -27,6 +29,26 @@
         }
         .form-group{
             margin-bottom:  10px;
+        }
+        .showa{
+            position: absolute;
+            top:0.4rem;
+            left: 0px;
+            right:0px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #000;
+            color: #ffffff;
+            width:3rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            border-radius: 0.1rem;
+            display: none;
+            opacity: 0.8;
+        }
+        input{
+            display: block;
         }
     </style>
     <title>登录注册</title>
@@ -56,25 +78,25 @@
                         <div class="b1z1"></div>
                         <div class="b1z2"></div>
                     </div>
-                    <a class="b1y">快速登录<i class="iconfont icon-gengduo"></i></a>
+                    <a href="index.php?a=sign" class="b1y">快速登录<i class="iconfont icon-gengduo"></i></a>
                 </div>
                 <div class="main">
-                    <form action="">
+                    <form  id="vlform" style="position: relative" autocomplete="off">
                         <div class="username">
-                            <input type="text" placeholder="请输入用户名">
+                            <label for="user"></label>
+                            <input type="text" id='user' name="user"  placeholder="请输入用户名">
                         </div>
                         <div class="username password">
-                            <input type="text" placeholder="请输入密码">
+                            <label for="pass"></label>
+                            <input type="password" id="pass" name="pass"  placeholder="请输入密码">
                         </div>
                         <div class="username agapass">
-                            <input type="text" placeholder="请确认密码">
+                            <input type="password" name="agpass" placeholder="请确认密码">
                         </div>
-                        <a href="index.php?a=award">
-                            <input type="" class="submit" value="立即注册">
+                        <a  class="zhuce">
+                            <button type="submit" class="submit">提交</button>
                         </a>
-
-
-
+                        <div class="showa"></div>
                     </form>
                 </div>
             </div>
@@ -82,3 +104,52 @@
     </div>
 </body>
 </html>
+<script>
+    $(function () {
+        $("#vlform").validate({
+            rules:{
+                user:{
+                  required:true
+                },
+                pass:{
+                    required:true,
+                    minlength:6
+                },
+                agpass:{
+                    required:true,
+                    minlength:6,
+                    equalTo:"#pass"
+                }
+            },messages:{
+                user:{
+                  required:"请输入用户名",
+                },
+                pass:{
+                    required:'请输入密码！',
+                    minlength:'密码长度至少为6位！'
+                },
+                agpass:{
+                    required:'请再次输入密码！',
+                    minlength:'密码长度至少为6位！',
+                    equalTo:'两次输入不一致，请重新输入！'
+                }
+            },submitHandler(){
+                $.ajax({
+                    url:"index.php?a=wx_zhuce",
+                    type:'post',
+                    data:$("#vlform").serialize(),
+                    success:function (res) {
+                        if(res=="no"){
+                            $(".showa").html('账号已存在!').slideDown(500).delay(1000).slideUp(500);
+                        }
+                        if(res=="ok"){
+                            $(".showa").html('注册成功').slideDown(500).delay(1000).slideUp(500,function () {
+                                location.href="index.php?a=award";
+                            })
+                        }
+                    }
+                })
+            }
+        })
+    })
+</script>

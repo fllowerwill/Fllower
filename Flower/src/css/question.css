@@ -33,19 +33,7 @@
     justify-content: center;
     align-items: flex-end;
 }
-.title{
-    width:2.51rem;
-    height: 1.17rem;
-    position: relative;
-    background: url("../image/xiaohua_03.png") no-repeat center center;
-    background-size:0.83rem ;
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap:nowrap;
-    position: relative;
-}
+
 .cir{
     width:0.45rem;
     height: 0.42rem;
@@ -175,6 +163,7 @@ button{
     margin-top:1.2rem;
     border:0px;
     margin-bottom: 0.5rem;
+    outline: none;
 }
 .right{
     width:2.89rem;

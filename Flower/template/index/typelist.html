@@ -14,11 +14,12 @@
 	<img src="{IMG_PATH}list-header.png" alt="">
 	<div class="headerbox">
 		<a href='index.php?a=type'  class="back"><img src="{IMG_PATH}type-back.png" alt=""></a>
+
 		<div class="title">
-			<div class="headertitle">领导</div>
+			<div class="headertitle">{$r["title"]}</div>
 			<div class="descbox">
 				<div class="heng"></div>
-				<div class="desc">给你的事业加点助力</div>
+				<div class="desc">{$r["descs"]}</div>
 				<div class="heng"></div>
 			</div>
 		</div>
@@ -46,14 +47,15 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide list-group">
 						<div class="list-group-item">
-							<a href='index.php?a=content'  class="mainbox">
-								<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>
+							{foreach $t as $k}
+							<a href="index.php?a=content&id={$k['id']}"  class="mainbox">
+								<div class="mainimg"><img src="{$k['img1']}" alt=""></div>
 								<div class="maincontent">
 									<div class="ct1">
-										<div class="mainname">鹤望兰</div>
+										<div class="mainname">{$k['name']}</div>
 										<div class="star"></div>
 									</div>
-									<div class="ct2">对前方阻碍不屈不挠</div>
+									<div class="ct2">{$k['says']}</div>
 									<div class="ct3">
 										<div class="fang"></div>
 										<div class="heng1"></div>
@@ -62,60 +64,34 @@
 									<div class="ct4">
 										<div class="enjoy">
 											<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>
-											<div class="number">232433</div>
+											<div class="number">{$k['likes']}</div>
 										</div>
 										<div class="enjoy">
 											<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>
-											<div class="number">67563</div>
+											<div class="number">{$k['share']}</div>
 										</div>
 									</div>
 								</div>
 
 							</a>
-							<a href='index.php?a=content'  class="mainbox">
-								<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>
-								<div class="maincontent">
-									<div class="ct1">
-										<div class="mainname">鹤望兰</div>
-										<div class="star"></div>
-									</div>
-									<div class="ct2">对前方阻碍不屈不挠</div>
-									<div class="ct3">
-										<div class="fang"></div>
-										<div class="heng1"></div>
-										<div class="fang"></div>
-									</div>
-									<div class="ct4">
-										<div class="enjoy">
-											<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>
-											<div class="number">232433</div>
-										</div>
-										<div class="enjoy">
-											<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>
-											<div class="number">67563</div>
-										</div>
-									</div>
-								</div>
-
-							</a>
+							{/foreach}
 
 						</div>
-						<div class="list-group-item">列表2</div>
-						<div class="list-group-item">列表3</div>
-						<div class="list-group-item">列表4</div>
-						<div class="list-group-item">列表</div>
-						<div class="list-group-item">列表</div>
+						<!--<div class="list-group-item">列表2</div>-->
+
 					</div>
 					<div class="swiper-slide list-group">
+
 						<div class="list-group-item">
-							<a href='index.php?a=content'  class="mainbox">
-								<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>
+							{foreach $f as $e}
+							<a href="index.php?a=content&id={$e['id']}"  class="mainbox">
+								<div class="mainimg"><img src="{$k['img1']}" alt=""></div>
 								<div class="maincontent">
 									<div class="ct1">
-										<div class="mainname">鹤望兰</div>
+										<div class="mainname">{$e['name']}</div>
 										<div class="star"></div>
 									</div>
-									<div class="ct2">对前方阻碍不屈不挠</div>
+									<div class="ct2">{$e['says']}</div>
 									<div class="ct3">
 										<div class="fang"></div>
 										<div class="heng1"></div>
@@ -124,49 +100,20 @@
 									<div class="ct4">
 										<div class="enjoy">
 											<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>
-											<div class="number">232433</div>
+											<div class="number" rel="{$e['id']}">{$e['likes']}</div>
 										</div>
 										<div class="enjoy">
 											<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>
-											<div class="number">67563</div>
+											<div class="number">{$e['share']}</div>
 										</div>
 									</div>
 								</div>
 
 							</a>
-							<a href='index.php?a=content'  class="mainbox">
-								<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>
-								<div class="maincontent">
-									<div class="ct1">
-										<div class="mainname">鹤望兰</div>
-										<div class="star"></div>
-									</div>
-									<div class="ct2">对前方阻碍不屈不挠</div>
-									<div class="ct3">
-										<div class="fang"></div>
-										<div class="heng1"></div>
-										<div class="fang"></div>
-									</div>
-									<div class="ct4">
-										<div class="enjoy">
-											<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>
-											<div class="number">232433</div>
-										</div>
-										<div class="enjoy">
-											<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>
-											<div class="number">67563</div>
-										</div>
-									</div>
-								</div>
-
-							</a>
-
+							{/foreach}
 						</div>
-						<div class="list-group-item">列表b</div>
-						<div class="list-group-item">列表c</div>
-						<div class="list-group-item">列表d</div>
-						<div class="list-group-item">列表</div>
-						<div class="list-group-item">列表</div>
+
+						<!--<div class="list-group-item">列表b</div>-->
 					</div>
 				</div>
 				</div>
@@ -203,6 +150,7 @@
             var _contentHeight = document.getElementsByClassName('swiper-slide')[0].offsetHeight;
              // 上拉加载
             if(mySwiper.translate <= _viewHeight - _contentHeight - 50 && mySwiper.translate < 0) {
+
                 // console.log("已经到达底部！");
                
                 if(loadFlag){
@@ -212,9 +160,63 @@
                 }
                 
                 setTimeout(function() {
-                    for(var i = 0; i <5; i++) {
+                    for(var i = 0; i <1; i++) {
                     	oi++;
-                        $(".list-group").eq(mySwiper2.activeIndex).append('<li class="list-group-item">我是加载出来的'+oi+'...</li>');
+                        $(".list-group").eq(mySwiper2.activeIndex).append('\t<div class="list-group-item">\n' +
+
+                            '\t\t\t\t\t\t\t<a href=""  class="mainbox">\n' +
+                            '\t\t\t\t\t\t\t\t<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t<div class="maincontent">\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct1">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="mainname">风信子</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="star"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct2">悲伤的爱情、永远的怀念</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct3">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="fang"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="heng1"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="fang"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct4">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="enjoy">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div class="number">479749</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="enjoy">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div class="number">758490</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t</div>\n' +
+                            '\n' +
+                            '\t\t\t\t\t\t\t</a>\n' +
+                            '\t\t\t\t\t\t\t<a href=""  class="mainbox">\n' +
+                            '\t\t\t\t\t\t\t\t<div class="mainimg"><img src="{IMG_PATH}listimg.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t<div class="maincontent">\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct1">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="mainname">矢车菊</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="star"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct2">温顺 爱心</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct3">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="fang"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="heng1"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="fang"></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t<div class="ct4">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="enjoy">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div href="" class="enyimg"><img src="{IMG_PATH}list-zan.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div class="number">679344</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t<div class="enjoy">\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div href="" class="enyimg"><img src="{IMG_PATH}list-fenxiang.png" alt=""></div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t\t<div class="number">848302</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t\t</div>\n' +
+                            '\t\t\t\t\t\t\t\t</div>\n' +
+                            '\n' +
+                            '\t\t\t\t\t\t\t</a>\n' +
+                            '\t\t\t\t\t\t</div>');
                     }
                      $(".loadtip").html('上拉加载更多...');
                     mySwiper.update(); // 重新计算高度;
@@ -264,6 +266,25 @@
 		$('.swiper-container2 .swiper-slide-active').css('height','auto').siblings('.swiper-slide').css('height','0px');
 		mySwiper.update();
 	});
+
+	// $(function(){
+	//     $(".number").click(function(){
+	//         var likes=$(this);
+	//         var id=likes.attr("rel");
+	//         likes.fadeOut(300);
+	//         $.ajax({
+	// 			type:"GET",
+	// 			url:url,
+	// 			data:"id="+id,
+	// 			cache:false,
+	// 			success:function(data) {
+	// 				likes.html(data);
+	// 				likes.fadeIn(300);
+     //            }
+	// 		});
+	//         return false;
+	// 	});
+	// });
 </script>
 </body>
 </html>

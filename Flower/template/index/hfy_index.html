@@ -14,10 +14,10 @@
 
 <div class="menu">
             <div class="user_head">
-                <img src="{IMG_PATH}hfy_banner1.png" alt="">
+                <img src="{$row['img']}" alt="">
             </div>
             <div class="user_name">
-                HELLOW KITTY
+                {$row['name']}
             </div>
             <ul class="menu_list">
                 <li>
@@ -157,43 +157,56 @@
         <li></li>
     </ul>
 </div>
-<ul class="attention_list">
-    <li>
-            <div class="attention_pic">
-                <img src="{IMG_PATH}hfy_attention.jpg" alt="">
-            </div>
-            <div class="attention_content">
-                <div class="content_title">
-                    无印花不夏天
+<div class="attention_list">
+    {foreach $arr as $item}
+        <div class="li">
+            <a href="index.php?a=content&id={$item['id']}" style="display: block;width: 100%;height: 100%;">
+                <div class="attention_pic">
+                    <img src="{$item['img2']}" alt="">
                 </div>
-                <div class="underline">
-                    <div class='underline_box'></div>
-                    <div class="underline_line"></div>
-                </div>
-                <div class="title_chinese">
-                    花的“99种”不为人知的秘密
-                </div>
-                <div class="title_english">
-                    The "99" secret secrets of flowers.
-                </div>
-                <div class="content_footer">
-                    <span class="series">兰/花/系/列</span>
-                    <div class="like_collect">
-                        <img src="{IMG_PATH}hfy_like.png" alt="">
-                        &nbsp;
-                        <span>359</span>
-                        &nbsp;&nbsp;
-                        <img src="{IMG_PATH}hfy_collect.png" alt="">
-                        &nbsp;
-                        <span>296</span>
+                <div class="attention_content">
+                    <div class="content_title">
+                        {$item['name']}
                     </div>
-                </div>
+                    <div class="underline">
+                        <div class='underline_box'></div>
+                        <div class="underline_line"></div>
+                    </div>
+                    <div class="title_chinese">
+                        {$item['says']}
+                    </div>
+                    <div class="title_english">
+                        {$item['english']}
+                   </div>
+                    <div class="content_footer">
+                        <span class="series">
+                            {if $item['type'] eq 0}
+                                绿植类
+                            {else}
+                                花卉类
+                            {/if}
+                        </span>
+                        <div class="like_collect">
+                            <img src="{IMG_PATH}hfy_like.png" alt="">
+                            &nbsp;
+                            <span>{$item['likes']}</span>
+                            &nbsp;&nbsp;
+                            <img src="{IMG_PATH}hfy_collect.png" alt="">
+                            &nbsp;
+                            <span>{$item['coll']}</span>
+                        </div>
+                    </div>
 
-            </div>
-            <div class="attention_page">
-            </div>
-        </li>
-    <li>
+                </div>
+                <div class="attention_page">
+                </div>
+            </a>
+        </div>
+    {/foreach}
+
+
+    <!--
+    <div class="li">
         <div class="attention_pic">
             <img src="{IMG_PATH}hfy_attention.jpg" alt="">
         </div>
@@ -227,8 +240,8 @@
         </div>
         <div class="attention_page">
         </div>
-    </li>
-    <li>
+    </div>
+    <div class="li">
         <div class="attention_pic">
             <img src="{IMG_PATH}hfy_attention.jpg" alt="">
         </div>
@@ -262,8 +275,8 @@
         </div>
         <div class="attention_page">
         </div>
-    </li>
-</ul>
+    </div>-->
+</div>
 <div class="blank">
 </div>
 
@@ -294,31 +307,35 @@
     </div>
     <ul class="relevant_list">
         <li>
+            {foreach $brr as $i}
             <div class="relevant_top">
                 <div class="relevant_etitle">
-                    No stamp is not summer
+                   {$i['english']}
                 </div>
                 <div class="relevant_title">
                     <div class="relevant_ctitle">
                         <div class="relevant_spot"></div>
-                        <span>兰花系列</span>
+                        <span>
+                        {if $i['type'] eq 0}
+                            绿植类
+                        {else}
+                            花卉类
+                        {/if}
+                        </span>
                     </div>
                     <div class="relevant_browse">
                         <i class="iconfont icon-browse"></i>
                         <span>&nbsp;</span>
-                        <span>2568</span>
+                        <span>{$i['share']}</span>
                     </div>
-
-
                 </div>
-
             </div>
             <div class="relevant_pic">
-                <img src="{IMG_PATH}hfy_relevant.png" alt="">
+                <img src="{$item['img1']}" alt="">
             </div>
             <div class="relevant_bottom">
                 <div class="relevant_intro">
-                    养花不开花纠结苦恼,长寿花喜肥生长季可施氮肥促长茎叶花后再施一次以氮壮。
+                    {$i['recomm']}
                 </div>
                 <div class="relevant_author">
                     <div class="head_portraits">
@@ -331,13 +348,14 @@
                     <div class="like_collect">
                         <i class="iconfont icon-dianzan"></i>
                         &nbsp;
-                        <span>359</span>
+                        <span>{$i['share']}</span>
                         &nbsp;&nbsp;
                         <i class="iconfont icon-shoucang"></i>
 
                     </div>
                 </div>
             </div>
+            {/foreach}
         </li>
 
     </ul>
@@ -375,7 +393,7 @@
             </div>
         </div>
         <li>
-            <a href="index.php?a=around">
+            <a href="index.php?a=aroundshop">
                 <div class="footer_icon">
                     <img src="{IMG_PATH}hfy_shopping.png" alt="">
                 </div>

@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="{FONT_PATH}font1/iconfont.css">
     <link rel="stylesheet" href="{FONT_PATH}font2/iconfont.css">
     <link rel="stylesheet" href="{FONT_PATH}font3/iconfont.css">
-    <link rel="stylesheet" href="{FONT_PATH}font8/iconfont.css">
+    <!--<link rel="stylesheet" href="{FONT_PATH}font8/iconfont.css">-->
     <link rel="stylesheet" href="{CSS_PATH}bootstrap.css">
     <script src="{JS_PATH}rem.js"></script>
+    <script src="{JS_PATH}jquery.js"></script>
+    <script src="{JS_PATH}jquery.validate.min.js">
+    </script>
     <style>
         .submit{
             display: block;
@@ -25,6 +28,25 @@
             color: #fff;
             font-size: 0.4rem;
             text-align: center;
+            font-family: "宋体";
+            line-height:35px;
+        }
+        .showa{
+            position: absolute;
+            top:0.4rem;
+            left: 0px;
+            right:0px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #000;
+            color: #ffffff;
+            width:3rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            border-radius: 0.1rem;
+            display: none;
+            opacity: 0.8;
         }
     </style>
     <title>登录页</title>
@@ -54,37 +76,82 @@
                         <div class="b1z1"></div>
                         <div class="b1z2"></div>
                     </div>
-                    <a class="b1y">更多 <i class="iconfont icon-gengduo"></i></a>
+                    <a href="index.php?a=register" class="b1y">用户注册<i class="iconfont icon-gengduo"></i></a>
                 </div>
                 <!--表单-->
                 <div class="main">
-                    <form action="">
+                    <form style="position: relative" id="vlform" autocomplete="off">
                         <div class="username">
-                            <input type="text" placeholder="请输入用户名">
+                            <label for="user"></label>
+                            <input type="text" id="user" name="user" value="" placeholder="请输入用户名">
                         </div>
                         <div class="username password">
-                            <input type="text" placeholder="请输入密码">
+                            <label for="pass"></label>
+                            <input type="text" id="pass" name="pass" value="" placeholder="请输入密码">
                         </div>
-                        <a href="index.php?a=lock">
-                            <input type="" class="submit" value=">">
+                        <a >
+                            <button type="submit" class="submit"> > </button>
                         </a>
-
+                        <div class="showa"></div>
                     </form>
                 </div>
-                <div class="b2">第三方登录</div>
-                <ul>
-                    <li>
-                        <i class="iconfont icon-qq"></i>
-                    </li>
-                    <li>
-                        <i class="iconfont icon-weixin"></i>
-                    </li>
-                    <li>
-                        <i class="iconfont icon-weibo"></i>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
 </body>
+<style>
+    #user-error,#pass-error,#agpass-error{
+        position: absolute;
+        right: 0;
+        top:0px;
+        color:red;
+        text-align: right;
+        line-height: 1.05rem;
+        margin-right: 0.3rem;
+    }
+    .username{
+        position: relative;
+    }
+</style>
 </html>
+<script>
+    $(function () {
+        $("#vlform").validate({
+            rules:{
+                user:{
+                    required:true
+                },
+                pass:{
+                    required:true
+                }
+            },messages:{
+                    user:{
+                        required:"请输入账号!"
+                    },
+                    pass:{
+                        required:"请输入密码!"
+                    }
+                },submitHandler(){
+                    $.ajax({
+                        url:'index.php?a=wx_chackpass',
+                        type:'post',
+                        data:$("#vlform").serialize(),
+                        success:function (res) {
+                            if(res=='ok') {
+                                $(".showa").html('登录成功!').slideDown(500).delay(1000).slideUp(500,function () {
+                                    location.href="index.php";
+                                });
+                            }
+                            if(res=='no'){
+                                $(".showa").html('密码错误!').slideDown(500).delay(1000).slideUp(500);
+
+                            }
+                            if(res=="sorry"){
+                                $(".showa").html('账号不存在!').slideDown(500).delay(1000).slideUp(500);
+                            }
+                        }
+                    })
+                }
+        })
+    })
+</script>

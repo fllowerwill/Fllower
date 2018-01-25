@@ -1,4 +1,3 @@
-
 body{
     background: #147921;
 }
@@ -22,7 +21,6 @@ body{
     color: #ffffff;
     font-size:0.32rem;
     padding:0 0.24rem;
-    font-family: font!important;
 }
 .yjt{
     display: block;
@@ -152,20 +150,11 @@ body{
     height:1.49rem;
     width:100%;
 }
-.main>.photo>.bottom>.zp{
-    width:1.34rem;
-    height: 1.5rem;
-    float: left;
-    background: url("../image/11.jpg") no-repeat center center;
-    background-size: 100% 100%;
-}
 .main>.photo>.bottom>.addzp{
     width:1.34rem;
     height: 1.5rem;
     float: left;
     margin-left:0.1rem;
-    background-size: 100% 100%;
-    background: #f6f6f6;
     position: relative;
 }
 .addzp div:nth-child(1){
@@ -194,6 +183,7 @@ body{
     width:100%;
     height: 1.04rem;
     margin-top:0.49rem;
+    position: relative;
 }
 .per>.per-name{
     font-size:0.3rem;
@@ -224,36 +214,20 @@ body{
     padding-left:0.34rem;
     display: block;
     border-radius: 0.08rem;
-
-}
-#date-sel-day{
-    width:30%;
-    height:0.63rem;
-    border:0px;
-    background:#f6f6f6;
-    outline:none;
-}
-#date-sel-month{
-    width:30%;
-    height:0.63rem;
-    border:0px;
-    background:#f6f6f6;
-    outline:none;
-}
-#date-sel-year{
-    width:30%;
-    height:0.63rem;
-    border:0px;
-    background:#f6f6f6;
-    outline:none;
-
 }
 .choice{
     height: 0.63rem;
+    width:100%;
     display: flex;
     justify-content: space-around;
     background:#f6f6f6;
     border-radius: 0.08rem;
+}
+.choice>input{
+    width:100%;
+    height: 100%;
+    border:0px;
+    outline: none;
 }
 select{
     -webkit-appearance: none!important;
@@ -262,7 +236,7 @@ select{
 }
 .next{
     width:7.02rem;
-    height:1.6rem;
+    height:1.04rem;
     position:absolute;
     bottom: 0px;
     left: 0px;
@@ -276,16 +250,28 @@ select{
     border-bottom-right-radius: 0.08rem;
     box-shadow:0rem -0.1rem 0.08rem -0.08rem rgba(0,0,0,0.2);
 }
-.next>a{
+.next>button{
+    border: 0px;
+    background: #ffffff;
     width:100%;
     height: 100%;
-    display: block;
+    display:flex;
     font-size: 0.3rem;
-    color: #000000;
-    line-height: 1.6rem;
+    color: #333333;
+    line-height: 1.04rem;
     font-weight: 600;
+    align-items: center;
+    justify-content:center;
 }
-.next>a>img{
+.next>button>img{
     width:0.2rem;
     height: 0.21rem;
+}
+#sel-error,#bir-error,#phone-error{
+    position: absolute;
+    right: 0;
+    top:0;
+    font-size: 0.14rem;
+    color:red;
+    z-index: 2;
 }

@@ -7,6 +7,18 @@
 .banner img{
     width: 100%;
 }
+#user-error,#pass-error,#agpass-error{
+    position: absolute;
+    right: 0;
+    top:0px;
+    color:red;
+    text-align: right;
+    line-height: 1.05rem;
+    margin-right: 0.3rem;
+}
+.username{
+    position: relative;
+}
 .ec{
     width: 5.88rem;
     height: 10.41rem;
@@ -100,6 +112,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: nowrap;
 }
 .username input{
     width:4.06rem;

@@ -12,20 +12,22 @@ header{
     top: 0px;
     left: 0.24rem;
 }
-header>img{
-    display: block;
-    width:60%;
-    position: absolute;
-    top:0px;
-    right:-0.35rem;
-    mix-blend-mode:multiply;
-}
+/*header>img{*/
+    /*display: block;*/
+    /*width:60%;*/
+    /*position: absolute;*/
+    /*top:-0.2rem;*/
+    /*right:-0.35rem;*/
+    /*mix-blend-mode:multiply;*/
+    /*opacity: 0.5;*/
+/*}*/
 .banner-top{
     width:100%;
     height:100%;
+    overflow: hidden;
 }
 .tx{
-    height: 35%;
+    height:1.29rem;
     width:100%;
     display: flex;
     align-items:flex-end;
@@ -89,9 +91,8 @@ header>img{
 }
 .name-box{
     width:100%;
-    height: 40%;
+    height:1rem;
     display: flex;
-    align-items: center;
 }
 .name-box .name{
     width:100%;
@@ -139,19 +140,6 @@ header>img{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-}
-.title{
-    width:2.51rem;
-    height: 1.17rem;
-    position: relative;
-    background: url("../image/xiaohua_03.png") no-repeat center center;
-    background-size:0.83rem ;
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap:nowrap;
-    position: relative;
 }
 .cir{
     width:0.45rem;
@@ -252,4 +240,19 @@ button{
     right: 0px;
     z-index: -1;
     opacity: 0.5;
+}
+#newpass-error,#pass-error,#agpass-error{
+    position: absolute;
+    right: 0.2rem;
+    top:0;
+    font-size: 0.14rem;
+    color:red;
+    z-index: 2;
+}
+#vlform div{
+    width:5.91rem;
+    margin: 0 auto;
+    height: 0.77rem;
+    line-height: 0.77rem;
+    position: relative;
 }

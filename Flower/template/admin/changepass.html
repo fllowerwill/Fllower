@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Bootstrap Advance Admin Template</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="{CSS_PATH}bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="{CSS_PATH}font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="{CSS_PATH}basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="{CSS_PATH}custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<style>
+    body{
+        height: 100%;
+    }
+    .panel{
+        margin: 50px auto;
+        /*position: fixed;*/
+        /*left: 0;*/
+        /*right: 0;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        /*top: 150px;*/
+    }
+    .box{
+        width: 300px;
+        height: 100px;
+        opacity: 0.8;
+        border-radius: 10px;
+        background: #00A13A;
+        font-size: 28px;
+        line-height: 100px;
+        text-align: center;
+        color: #fff;
+        /*display: none;*/
+
+        position: fixed;
+        top:100px;
+        left: 50%;
+        margin-left: -150px;
+    }
+</style>
+<body>
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    修改管理员用户密码
+                </div>
+                <div class="panel-body">
+                    <form role="form" id="signupForm1">
+                        <div class="form-group">
+                            <label>管理员用户名</label>
+                            <input class="form-control" type="text" value='{$user}' id="name" name="username" readonly>
+
+                        </div>
+                        <div class="form-group">
+                            <label>新密码</label>
+                            <input class="form-control" type="text" placeholder='请输入新密码'  id="newpass" name="newpass" >
+
+                        </div>
+                        <div class="form-group">
+                            <label>确认密码</label>
+                            <input class="form-control" type="text" placeholder='请确认输入密码' id="confirm_password" name="confirm_password" >
+                        </div>
+
+
+                        <button type="submit" class="btn btn-info">提交 </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+
+        </div>
+
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="{JS_PATH}jquery.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{JS_PATH}bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="{JS_PATH}jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="{JS_PATH}custom.js"></script>
+    <script src="{JS_PATH}jquery.validate.js"></script>
+
+
+
+</body>
+
+<script>
+
+    $(function () {
+
+
+        $("#signupForm1").validate({
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 1
+
+
+                },
+
+                newpass: {
+                    required: true,
+                    minlength: 1
+
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 1,
+                    equalTo: "#newpass"
+                },
+
+
+            },
+            messages: {
+
+                username: {
+                    required: "请输入用户名",
+                    minlength: "您的用户名必须至少1个字",
+
+                },
+                newpass: {
+                    required: "请输入密码",
+                    minlength: "您的密码必须至少有1个字符"
+                },
+                confirm_password: {
+                    required: "请输入密码",
+                    minlength: "您的密码必须至少有1个字符",
+                    equalTo: "请输入与上述相同的密码"
+                }
+
+            },
+            submitHandler: function () {
+
+                var name=$('#name').val();
+
+                var pass=$('#newpass').val();
+                $.ajax({
+                    url: 'index.php?m=admin&a=updatepass',
+                    type: 'post',
+                    data:{name,pass},
+                    success: function (data) {
+                        alert(data);
+
+                    }
+                })
+            }
+        })
+
+    })
+
+
+</script>
+</html>

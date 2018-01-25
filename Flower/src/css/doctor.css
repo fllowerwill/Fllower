@@ -247,7 +247,7 @@ span:nth-child(2){
 /*3*/
 .con2{
     width: 7.08rem;
-    height: 6.5rem;
+    height: auto;
     border-radius: .2rem;
     border: 1px solid #ebf4ec;
     margin: 0 auto;
@@ -307,12 +307,12 @@ span:nth-child(2){
     top: -.15rem;
 }
 .problem1{
-    width:10rem;
-    height:2.5rem;
-    margin-top: 1rem;
+    width:5rem;
+    height:auto;
     border-radius: .2rem;
     border: 1px solid #ebf4ec;
     margin-left: .2rem;
+    padding: 0.2rem 0;
 }
 .problem1 p{
     font-size: .25rem;
@@ -343,12 +343,13 @@ span:nth-child(2){
 }
 .answer2{
     width:5.3rem;
-    height:2.3rem;
-    margin-top: 1.8rem;
+    height:auto;
     border-radius: .2rem;
     border: 1px solid #ebf4ec;
     margin-left:1.5rem;
     background: #189727;
+    margin-bottom: 0.5rem;
+    margin-top:0.5rem;
 }
 .answer2-title{
     width:100% ;

@@ -10,8 +10,31 @@
     <link rel="stylesheet" href="{CSS_PATH}wx-zjrz-1.css">
     <script src="{JS_PATH}rem.js"></script>
     <script src="{JS_PATH}jquery.min.js"></script>
+    <script src="{JS_PATH}jquery.validate.min.js"></script>
     <script src="{JS_PATH}data.js"></script>
+    <script type="text/javascript" src="{JS_PATH}zepto.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}iscroll-zoom.js"></script>
+    <script type="text/javascript" src="{JS_PATH}script.js"></script>
 </head>
+<style>
+    .main>.photo>.bottom>.zp{
+        width:1.34rem;
+        height: 1.5rem;
+        float: left;
+        background: url("{$img}") no-repeat center center;
+        background-size: 100% 100%;
+    }
+    #sc{
+        display: block;
+        width:100%;
+        height: 100%;
+    }
+    .addzp{
+        background: url("{IMG_PATH}add.jpg") no-repeat center center;
+        background-size:80% auto;
+    }
+
+</style>
 <body>
     <div class="cir"></div>
     <div class="rz-title">
@@ -53,64 +76,99 @@
         </div>
     </div>
     <div class="jbs"></div>
-    <form action="">
-    <div class="main">
-            <div class="photo">
-                <div class="top">
-                    <p>照片 </p>
-                    <p>&nbsp;PHOTOS</p>
-                </div>
-                <div class="bottom">
-                    <div class="zp"></div>
-                    <div class="addzp">
-                        <div></div>
-                        <div></div>
+    <form id="vlform" enctype="multipart/form-data" method="post" action="index.php?a=wx_photo">
+        <div class="main">
+                <div class="photo">
+                    <div class="top">
+                        <p>照片 </p>
+                        <p>&nbsp;PHOTOS</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="zp"></div>
+                        <div class="addzp">
+                            <label for="sc"></label>
+                            <input type="file" name="picfil" id="sc" multiple style="opacity: 0" onchange="val(this)">
+                        </div>
                     </div>
                 </div>
+                <div class="per">
+                    <div class="per-name">
+                        姓名<span>&nbsp;NAME</span>
+                    </div>
+                    <label for="user"></label>
+                    <input type="text" id="user" class="name" name="user" value="{$name}" readonly>
+                </div>
+                <div class="per">
+                    <div class="per-name">
+                        性别<span>SEX</span>
+                    </div>
+                    <label for="sel"></label>
+                    <select name="sex" id="sel">
+                        <option value="" selected="selected">请选择</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+            <div class="per">
+                <div class="per-name">
+                    生日<span>BIRTHDAY</span>
+                </div>
+                <div class="choice">
+                    <label for="bir"></label>
+                    <input type="date" id="bir" name="bir">
+                </div>
             </div>
             <div class="per">
                 <div class="per-name">
-                    姓名<span>&nbsp;NAME</span>
+                    手机号<span>&nbsp;MOBILE NUMBER</span>
                 </div>
-                <input type="text" class="name">
+                <label for="phone"></label>
+                <input type="text" name="phone" id="phone" class="name">
             </div>
-            <div class="per">
-                <div class="per-name">
-                    姓名<span>&nbsp;NAME</span>
-                </div>
-                <select>
-                    <option value="男">男</option>
-                    <option value="女">女</option>
-                </select>
-            </div>
-        <div class="per">
-            <div class="per-name">
-                生日<span>BIRTHDAY</span>
-            </div>
-            <div class="choice">
-                <select id="date-sel-year" rel="2015"></select>
-                <select id="date-sel-month" rel="9"></select>
-                <select id="date-sel-day" rel="10"></select>
+            <div class="next">
+                <button type="submit">下一步 &nbsp;<img src="{IMG_PATH}next.png" alt=""></button>
             </div>
         </div>
-        <div class="per">
-            <div class="per-name">
-                手机号<span>&nbsp;MOBILE NUMBER</span>
-            </div>
-            <input type="text" class="name">
-        </div>
-        <div class="next">
-            <a href="index.php?a=zjrz2">下一步 <img src="{IMG_PATH}next.png" alt=""></a>
-        </div>
-    </div>
     </form>
 </body>
 </html>
-
 <script>
-    $.date_picker({
-        YearSelector:  "#date-sel-year",
-        MonthSelector: "#date-sel-month",
-        DaySelector:   "#date-sel-day"
-    });
+    $(function () {
+        jQuery.validator.addMethod("isMobile", function(value, element) {
+            var length = value.length;
+            var mobile ={$yz} ;
+            return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请正确填写您的手机号码");
+        $("#vlform").validate({
+            rules:{
+                sex:{
+                    required:true
+                },
+                bir:{
+                    required:true
+                },
+                phone:{
+                    required:true,
+                    minlength:11,
+                    isMobile:true
+                }
+            },messages:{
+                sex:{
+                    required:'请选择性别'
+                },
+                bir:{
+                    required:'请选择生日'
+                },phone:{
+                    required:'请输入手机号码',
+                    minlength : "确认手机不能小于11个字符",
+                    isMobile : "请正确填您的手机号码"
+                }
+            }
+        })
+    })
+    function val(obj) {
+        let yl=document.querySelector('.zp')
+        url=window.URL.createObjectURL(obj.files[0]);
+        yl.style.backgroundImage=`url(${ url})`
+    }
 </script>

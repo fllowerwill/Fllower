@@ -11,7 +11,24 @@
     <script src="{JS_PATH}rem.js"></script>
     <script src="{JS_PATH}jquery.min.js"></script>
     <script src="{JS_PATH}data.js"></script>
+    <script src="{JS_PATH}jquery.validate.min.js"></script>
 </head>
+<style>
+    .showa{
+        position: absolute;
+        top:0;
+        left: 0px;
+        right:0px;
+        bottom: 0;
+        margin:auto;
+        background:rgba(0,0,0,0.6);
+        color: #ffffff;
+        line-height:12rem;
+        font-size:0.45rem;
+        text-align: center;
+        display: none;
+    }
+</style>
 <body>
 <div class="cir"></div>
 <div class="rz-title">
@@ -53,51 +70,103 @@
     </div>
 </div>
 <div class="jbs"></div>
-<form action="">
+<form  id="vlform">
     <div class="main">
         <div class="per">
             <div class="per-name">
                 职业<span>&nbsp;OCCUPATION</span>
             </div>
-            <input type="text" class="name">
+            <label for="zy"></label>
+            <input type="text" id="zy" name="zy" class="name">
         </div>
         <div class="per">
             <div class="per-name">
                 公司<span>&nbsp;COMPANY</span>
             </div>
-            <input type="text" class="name">
+            <label for="com"></label>
+            <input id="com" name="com" type="text" class="name">
         </div>
         <div class="per">
             <div class="per-name">
                 证书<span>&nbsp;DIPLOMA</span>
             </div>
-            <input type="text" class="name">
+            <label for="zs"></label>
+            <input type="text" id="zs" name="zs" class="name">
         </div>
         <div class="per">
             <div class="per-name">
                 邮箱<span>&nbsp;MAILBOX</span>
             </div>
-            <input type="text" class="name">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" class="name">
         </div>
         <div class="per">
             <div class="per-name">
                 自我评价<span>&nbsp;aboutme</span>
             </div>
-            <input type="text" class="name">
+            <label for="pj"></label>
+            <input type="text" id="pj" name="pj" class="name">
         </div>
         <div class="next">
-            <a href="">下一步:等待审核</a>
+            <button type="submit">下一步:等待审核</button>
         </div>
     </div>
 </form>
+    <div class="showa"></div>
 </body>
 </html>
-
-
 <script>
-    $.date_picker({
-        YearSelector:  "#date-sel-year",
-        MonthSelector: "#date-sel-month",
-        DaySelector:   "#date-sel-day"
-    });
+    $(function () {
+        $('#vlform').validate({
+            rules:{
+                zy:{
+                    required:true
+                },
+                com:{
+                    required:true
+                },
+                zs:{
+                    required:true
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                pj:{
+                  required:true
+                }
+            },
+            messages:{
+                zy:{
+                    required:'请填写你的职业'
+                },
+                com:{
+                    required:'请填写公司名称'
+                },
+                zs:{
+                    required:'请填写你的证书'
+                },
+                email:{
+                    required:'请输入邮箱',
+                    email:'邮箱格式不正确'
+                },
+                pj:{
+                    required:'请填写自我评价'
+                }
+            },submitHandler(){
+                $.ajax({
+                    url:'index.php?a=wx_xq',
+                    type:'post',
+                    data:$("#vlform").serialize(),
+                    success:function (res) {
+                      if(res=='ok'){
+                          $(".showa").html('已提交，正在审核！').show(1000,function () {
+                              location.href='index.php?a=mrrPre'
+                          });
+                      }
+                    }
+                })
+            }
+        })
+    })
 </script>
